@@ -94,8 +94,14 @@ int stack::peek()
 	input parametrs:none
 	output parameters:topmost element of stack(an integer value)
 	*/
+	
 	if(top!=-1)
-		return arr[top];
+			return arr[top];
+	else
+	{
+		cout<<"\nUNDERFLOW!";
+		exit(0);
+	}	
 }
 
 bool stack::isEmpty()
@@ -156,7 +162,7 @@ int main()
 	cout<<"STACK IMPLEMENTATION::";
 	cout<<"\n1.PUSH";
 	cout<<"\n2.POP";
-	cout<<"\n3.FIRST ELEMENT";
+	cout<<"\n3.TOPMOST ELEMENT";
 	cout<<"\n4.CURRENT SIZE";
 	cout<<"\n5.IS STACK EMPTY?";
 	cout<<"\n6.IS STACK FULL?";
@@ -176,7 +182,8 @@ int main()
 				break;
 		
 		case 3:x=s.peek();
-				cout<<"\nPPEKED ELEMENT IS: "<<x;
+				if(x)
+					cout<<"\nPPEKED ELEMENT IS: "<<x;
 				break;
 		case 4:x=s.size();
 				cout<<"\nCURRENT SIZE is: "<<x;
