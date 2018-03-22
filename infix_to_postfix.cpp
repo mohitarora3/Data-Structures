@@ -1,6 +1,5 @@
 #include <iostream>
-#include <cstdlib>
-#include<string>
+#include<conio.h>
 #define MAXSIZE 100  // or const int MAXSIZE=100;
 
 using namespace std;
@@ -210,58 +209,7 @@ int main()
 	cout<<"/nENTER INFIX EXPRESSION";
 	cin>>str;
 	conversion(str,str.length());	
-	/*	
-	do
-	{
-	cout<<"STACK IMPLEMENTATION::";
-	cout<<"\n1.PUSH";
-	cout<<"\n2.POP";
-	cout<<"\n3.TOPMOST ELEMENT";
-	cout<<"\n4.CURRENT SIZE";
-	cout<<"\n5.IS STACK EMPTY?";
-	cout<<"\n6.IS STACK FULL?";
-	cout<<"\n\tenter your choice";
-	cin>>ch;
-	
-	switch(ch)
-	{
-		
-		case 1:cout<<"\nEnter element";
-				cin>>ele;
-				s.push(ele);
-				break;
-				
-		case 2:x=s.pop();
-				cout<<"\nPOPPED ELEMENT IS: "<<x;
-				break;
-		
-		case 3:x=s.peek();
-				if(x)
-					cout<<"\nPPEKED ELEMENT IS: "<<x;
-				break;
-		case 4:x=s.size();
-				cout<<"\nCURRENT SIZE is: "<<x;
-				break;
-		case 5:ans=s.isEmpty();
-				if(ans)
-					cout<<"\nSTACK IS EMPTY";
-				else
-					cout<<"\nSTACK IS NOT EMPTY";
-				break;
-		case 6:ans=s.isFull();
-				if(ans)
-					cout<<"\nSTACK IS FULL";
-				else
-					cout<<"\nSTACK IS NOT FULL";
-				break;
-		default:cout<<"\nWRONG CHOICE!!";
-				
-				
-	}
-	cout<<"\nwant to continue (enter Y or Y) ";
-	cin>>c;	
-	}while(c=='y'||c=='Y');
-	*/
+	getch();
 	
 }
 
