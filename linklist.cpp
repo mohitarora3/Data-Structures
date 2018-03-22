@@ -52,25 +52,29 @@ class SLinkedList {
 	SNode* head; 							// pointer to the head of list
 };
 
-SlinkedList::SLinkedList()
+SLinkedList::SLinkedList()
+{
+	head=0;
+}
+SLinkedList::~SLinkedList()
 {
 	head=0;
 }
 
-bool SLinkedList::empty()
+ bool SLinkedList::empty() const
 {
 	if(head==0)
- 	   return TRUE;
+ 	   return true;
 	else 
-		 return FALSE; 
+		 return false; 
 }
 
-string SLinkedList::front()
+string SLinkedList::front() const
 {
-	return head;
+	return head->elem;
 }
 
-void SLinkedList::addFront(String &e)
+void SLinkedList::addFront(const string &e)
 {
 	if(head==0)
  			   head=new node(e);
@@ -78,7 +82,7 @@ void SLinkedList::addFront(String &e)
     	head=new node(e,head);
     	
 }
-void SLinkedList::addBack(String &e)
+void SLinkedList::addBack(string &e)
 {
 	if(head==0)
 			   head=new node(e);
@@ -134,4 +138,67 @@ void SLinkedList::print()
 	{
 		cout<<temp->elem<<" ";
 	}
+}
+
+int main()
+{
+	int choice,i,n;
+	string el;
+	char ch;
+	linklist l;
+	do
+	{
+		clrscr();
+		cout<<"\n\n\tS.I.N.G.L.Y. L.I.N.K. L.I.S.T";
+		cout<<"\n\n\t-----------------------------";
+		cout<<"\n\n\t1.ADD TO HEAD";
+		cout<<"\n\n\t2.ADD TO TAIL";
+		cout<<"\n\n\t3.DELETE FROM HEAD";
+		cout<<"\n\n\t4.DELETE FROM TAIL";
+		cout<<"\n\n\t5.FRONT ELEMENT";
+		cout<<"\n\n\t6.IS LIST EMPTY";
+		cout<<"\n\n\t7.DISPLAY";
+		cout<<"\n\n\t13.EXIT";
+		cout<<"\n\n\tENTER YOUR CHOICE";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:cout<<"\n\n\tENTER THE ELEMENT : ";
+			       cin>>el;
+			       //node n(el,0);
+			       l.addFront(el);
+			       l.display();
+			       break;
+			case 2:cout<<"\n\n\tENTER THE ELEMENT : ";
+			       cin>>el;
+			       l.addBack(el);
+			       l.display();
+			       break;
+			case 3:l.deleteFront();
+			       l.display();
+			       break;
+			case 4:l.deleteBack();
+			       l.display();
+			       break;
+			case 5:cout<<"\n\n\tFRONT ELEMENT:";
+			       el=1.front();
+			       cout<<el;
+				   l.display();
+			       break;
+			case 6:if(l.empty())
+						cout<<"\n\tLINKLIST IS EMPTY";
+			        else
+			        	cout<<"\n\tLINKLIST IS NOT EMPTY";
+			       break;
+			case 7:l.display();
+			       break;
+
+			default:cout<<"\n\tWRONG CHOICE!!";
+				break;
+		}
+
+		cout<<"\n\n\tDO U WANT TO CONTINUE?";
+		cin>>ch;
+	}while(ch=='Y'||ch=='y');
+	getch();
 }
