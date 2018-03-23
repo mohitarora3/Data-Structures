@@ -121,7 +121,7 @@ void SLinkedList::removeEnd()
     else 
     {
 	    SNode *prev,*temp=head;
-    	while(temp)
+    	while(temp->next)
     	{
 		    prev=temp;
     		temp=temp->next;
@@ -137,6 +137,7 @@ void SLinkedList::print()
 	while(temp)
 	{
 		cout<<temp->elem<<" ";
+		temp=temp->next;
 	}
 }
 
@@ -183,7 +184,6 @@ int main()
 			case 5:cout<<"\n\n\tFRONT ELEMENT:";
 			       el=l.front();
 			       cout<<el;
-				   l.print();
 			       break;
 			case 6:if(l.empty())
 						cout<<"\n\tLINKLIST IS EMPTY";
