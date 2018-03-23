@@ -71,7 +71,10 @@ SLinkedList::~SLinkedList()
 
 string SLinkedList::front() 
 {
+    if(head)
 	return head->elem;
+	cout<<"\n\tLINKLIST IS EMPTY";
+	return "";
 }
 
 void SLinkedList::addFront(string e)
