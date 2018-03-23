@@ -41,10 +41,10 @@ class SLinkedList {
 	public:
 	SLinkedList();							// empty list constructor
 	~SLinkedList();							// destructor
-	bool empty() const; 					// is list empty?
-	const string& front() const; 			// get front element
-	void addFront(const string& e); 		// add to front of list
-	void addBack(const string& e); 			// add to back of list
+	bool empty() ; 					// is list empty?
+	string front() ;			// get front element
+	void addFront(string e); 		// add to front of list
+	void addBack(const string e); 			// add to back of list
 	void removeFront();			 			// remove from front 
 	void removeEnd();						// remove from end
 	void print(); 							// prints the SLL
@@ -58,10 +58,10 @@ SLinkedList::SLinkedList()
 }
 SLinkedList::~SLinkedList()
 {
-	head=0;
+	delete head;
 }
 
- bool SLinkedList::empty() const
+ bool SLinkedList::empty() 
 {
 	if(head==0)
  	   return true;
@@ -69,32 +69,32 @@ SLinkedList::~SLinkedList()
 		 return false; 
 }
 
-string SLinkedList::front() const
+string SLinkedList::front() 
 {
 	return head->elem;
 }
 
-void SLinkedList::addFront(const string &e)
+void SLinkedList::addFront(string e)
 {
 	if(head==0)
- 			   head=new node(e);
+ 			   head=new SNode(e);
     else
-    	head=new node(e,head);
+    	head=new SNode(e,head);
     	
 }
-void SLinkedList::addBack(string &e)
+void SLinkedList::addBack(string e)
 {
 	if(head==0)
-			   head=new node(e);
+			   head=new SNode(e);
     else
     {
-    	node *prev,*temp=head;
+    	SNode *prev,*temp=head;
     	while(temp)
     	{
 		    prev=temp;
     		temp=temp->next;
 		}
-		prev->next=new node(e);
+		prev->next=new SNode(e);
 	}
 }
 void SLinkedList::removeFront()
@@ -103,7 +103,7 @@ void SLinkedList::removeFront()
 			 cout<<"\n\tUNDERFLOW";
     else 
     {
-    	node *temp=head;
+    	SNode *temp=head;
     	if(head->next==0)
 				 {
 				 	head=0;
@@ -114,13 +114,13 @@ void SLinkedList::removeFront()
     }
 }
     	
-void SLinkedList::removeBack()
+void SLinkedList::removeEnd()
 {
     if(!head)
        cout<<"\n\tUNDERFLOW";
     else 
     {
-	    node *prev,*temp=head;
+	    SNode *prev,*temp=head;
     	while(temp)
     	{
 		    prev=temp;
@@ -133,7 +133,7 @@ void SLinkedList::removeBack()
 
 void SLinkedList::print()
 {
-	node *temp=head;
+	SNode *temp=head;
 	while(temp)
 	{
 		cout<<temp->elem<<" ";
@@ -145,7 +145,7 @@ int main()
 	int choice,i,n;
 	string el;
 	char ch;
-	linklist l;
+	SLinkedList l;
 	do
 	{
 		clrscr();
@@ -167,30 +167,30 @@ int main()
 			       cin>>el;
 			       //node n(el,0);
 			       l.addFront(el);
-			       l.display();
+			       l.print();
 			       break;
 			case 2:cout<<"\n\n\tENTER THE ELEMENT : ";
 			       cin>>el;
 			       l.addBack(el);
-			       l.display();
+			       l.print();
 			       break;
-			case 3:l.deleteFront();
-			       l.display();
+			case 3:l.removeFront();
+			       l.print();
 			       break;
-			case 4:l.deleteBack();
-			       l.display();
+			case 4:l.removeEnd();
+			       l.print();
 			       break;
 			case 5:cout<<"\n\n\tFRONT ELEMENT:";
-			       el=1.front();
+			       el=l.front();
 			       cout<<el;
-				   l.display();
+				   l.print();
 			       break;
 			case 6:if(l.empty())
 						cout<<"\n\tLINKLIST IS EMPTY";
 			        else
 			        	cout<<"\n\tLINKLIST IS NOT EMPTY";
 			       break;
-			case 7:l.display();
+			case 7:l.print();
 			       break;
 
 			default:cout<<"\n\tWRONG CHOICE!!";
