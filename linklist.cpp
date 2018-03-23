@@ -120,12 +120,20 @@ void SLinkedList::removeEnd()
        cout<<"\n\tUNDERFLOW";
     else 
     {
+        if(head->next==0)
+        {
+            delete head;
+            head=0;
+            return;
+        }
+        
 	    SNode *prev,*temp=head;
     	while(temp->next)
     	{
 		    prev=temp;
     		temp=temp->next;
 		}
+		delete temp;
 		prev->next=0;
 	}	
    	
