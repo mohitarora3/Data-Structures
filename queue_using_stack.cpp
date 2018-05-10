@@ -5,7 +5,7 @@
 using namespace std;
 class queue
 {
-	stack s1,s2;
+	stack<int> s1,s2;
 	int curr_size;
 	public:
 		void enque(int);
@@ -20,19 +20,21 @@ class queue
 
 void queue::enque(int ele)
 {
-	s.push(ele);
+	s1.push(ele);
 }
 
 int queue::deque()
 {
+	if(s1.size()==0)
+		return -1;
 	while(!s1.empty())
 	{
 		s2.push(s1.top());
 		s1.pop();
 	}
-	stack s;
-	int x=s1.top();
-	s1.pop();
+	stack<int> s;
+	int x=s2.top();
+	s2.pop();
 	s=s1;
 	s1=s2;
 	s2=s;
