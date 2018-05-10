@@ -78,10 +78,14 @@ void queue::enqueue(int ele)
 			return;
 			
 		}
-		else
+		else if(rear==-1)
 		{
-			if(front==rear)
-				front=0;
+		    rear=front=0;
+		    arr[rear]=ele;
+		    ++count;
+		}
+		else {
+		
 			rear=(rear+1)%capacity;
 			arr[rear]=ele;
 			++count;
@@ -105,7 +109,7 @@ int queue::dequeue()
 				front=-1;
 				rear=-1;
 			}
-			front=(front+1)%capacity;
+			else front=(front+1)%capacity;
 			return x;
 		}
 }
