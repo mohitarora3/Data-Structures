@@ -18,7 +18,7 @@ class stack
 	int top;
 	int capacity;					// checks size defined by user
 public:
-	stack(int size = MAXSIZE);			// constructor to create array dynamically
+	stack();			// constructor to create array dynamically
 	~stack();					// destructor to delete dynamically created array
 	void push(char &);
 	char pop();
@@ -44,7 +44,7 @@ int weight(char ch)
 
 
 			
-stack::stack(int size)
+stack::stack()
 {
 	/*
 	objective:to initialize class variables with an initial value and dynamically create an array of given size
@@ -52,9 +52,9 @@ stack::stack(int size)
 					size-integer value
 	output paramaters:none
 	*/
-	capacity=size;
+	capacity=MAXSIZE;
 	top=-1;
-	arr=new char[size];
+	arr=new char[MAXSIZE];
 }
 void stack::push(char &ele)
 {
@@ -164,7 +164,7 @@ void conversion(string infix,int n)
 	
 	int i;
 	char x;
-	stack s(n);
+	stack s;
 	for(i=0;i<n;i++)
 	{
 		if(infix[i]=='(')
@@ -179,8 +179,8 @@ void conversion(string infix,int n)
 				}
 		}
 			 
-		else if((infix[i]>=65&&infix[i]<=90)||(infix[i]>=97||infix[i]<=122))
-			cout<<infix[i];
+		else if((infix[i]>='a'&&infix[i]<='z')||(infix[i]>='A'&&infix[i]<='Z'))
+			{cout<<infix[i];}
 		else if (weight(s.peek())>=weight(infix[i]))
 			{
 				while(weight(s.peek())>=weight(infix[i]))
@@ -203,10 +203,8 @@ int main()
 	string str;
 	bool ans;
 	char c;
-	cout<<"Enter size";
-	cin>>n;
-	stack s(n);
-	cout<<"/nENTER INFIX EXPRESSION";
+	stack s;
+	cout<<"\nENTER INFIX EXPRESSION";
 	cin>>str;
 	conversion(str,str.length());	
 	getch();
