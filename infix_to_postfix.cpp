@@ -56,6 +56,7 @@ stack::stack()
 	top=-1;
 	arr=new char[MAXSIZE];
 }
+
 void stack::push(char &ele)
 {
 	/*
@@ -210,4 +211,3 @@ int main()
 	getch();
 	
 }
-
