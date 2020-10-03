@@ -8,6 +8,7 @@ using namespace std;
 
 
 class stack
+{
 	/*
 	objective: Create a class for implementing Stack using array
 	input parameters: none
@@ -15,19 +16,19 @@ class stack
 	description:  class definition
 	approach: Class defines data member and member function of the stack class
 	*/
-{
+	
 	int *arr;					// for dynamic array 
 	int top;
 	int capacity;					// checks size defined by user
-public:
-	stack(int size = MAXSIZE);			// constructor to create array dynamically
-	~stack();					// destructor to delete dynamically created array
-	void push(int &);
-	int pop();
-	int peek();
-	int size();					// Current size of stack
-	bool isEmpty();
-	bool isFull();
+	public:
+		stack(int size = MAXSIZE);			// constructor to create array dynamically
+		~stack();					// destructor to delete dynamically created array
+		void push(int &);
+		int pop();
+		int peek();
+		int size();					// Current size of stack
+		bool isEmpty();
+		bool isFull();
 };
 stack::stack(int size)
 {
@@ -77,7 +78,6 @@ int stack::pop()
 
 int stack::size()
 {
-	
 	/*
 	objective:to return current size of stack
 	input parametrs:none
@@ -88,7 +88,6 @@ int stack::size()
 
 int stack::peek()
 {
-	
 	/*
 	objective:to return top element of stack
 	input parametrs:none
@@ -206,6 +205,7 @@ int main()
 	}
 	cout<<"\nwant to continue (enter Y or Y) ";
 	cin>>c;	
+		
 	}while(c=='y'||c=='Y');
 	
 	
