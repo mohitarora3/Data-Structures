@@ -1,6 +1,7 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
+
 class node
 {
 	/*
@@ -25,6 +26,7 @@ class node
 			next=ptr;
 		}
 };
+
 class linkedlist
 {
 	/*
@@ -47,6 +49,7 @@ class linkedlist
 		void reverse_consec();
 		void display();
 };
+
 void linkedlist::add_to_tail(int ele)
 {
 	/*
@@ -67,6 +70,7 @@ void linkedlist::add_to_tail(int ele)
 	}
 	
 }
+
 void linkedlist::display()
 {
 	/*
@@ -83,6 +87,7 @@ void linkedlist::display()
 		
 	}
 }
+
 void linkedlist::reverse_consec()
 {
 	/*
