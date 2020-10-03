@@ -1,6 +1,7 @@
 #include<iostream.h>
 #include<conio.h>
 #include<process.h>
+
 class node
 {
 	int info;
@@ -100,11 +101,10 @@ if(tail!=0)
  }
 }
 
-
-
 void linklist::addtotail(int ele)
 {
 	tail=new node(ele,0,tail);
+	
 	if(head!=0)
 	{
 		tail->prev->next=tail;
@@ -224,29 +224,35 @@ void main()
 			       l1.addtohead(x);
 			       l1.display();
 			       break;
+				
 			case 2:cout<<"\n\n\tENTER THE ELEMENT : ";
 			       cin>>x;
 			       l1.addtotail(x);
 			       l1.display();
 			       break;
+				
 			case 3:cout<<"\n\n\tDELETED ITEM IS : ";
 			       cout<<"\t"<<l1.deletefromhead();
 			       cout<<"\n\n\tAFTER DELETING\n\n\t_______________________";
 			       l1.display();
 			       break;
+				
 			case 4:cout<<"\n\n\tDELETED ITEM IS : ";
 			       cout<<"\t"<<l1.deletefromtail();
 			       cout<<"\n\n\tAFTER DELETING\n\n\t_______________________";
 			       l1.display();
 			       break;
+				
 			case 5:cout<<"\n\n\tENTER ELEMENT TO BE DELETED : ";
 			       cin>>ele;
 			       l1.deleteanode(ele);
 			       l1.display();
 			       break;
+				
 			case 6:l1.rev();
 			       l1.display();
 			       break;
+				
 			case 7:exit(0);
 			       break;
 		}
@@ -255,34 +261,3 @@ void main()
 	}while(ch=='Y'||ch=='y');
 	getch();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
