@@ -15,7 +15,9 @@ class SNode {
 	private:
 	  string elem; 
 	  SNode* next; 
+	
 	friend class SLinkedList; // provides SLinkedList access to SNode
+	
 	public:
 		SNode()
 		{
@@ -37,19 +39,20 @@ class SLinkedList {
 	output value: none
 	side effects: Class SlinkedList defines Single Linked LIst class
 	approach: Class definition
-	*/						
-	public:
-	SLinkedList();							// empty list constructor
-	~SLinkedList();							// destructor
-	bool empty() ; 					// is list empty?
-	string front() ;			// get front element
-	void addFront(string e); 		// add to front of list
-	void addBack(const string e); 			// add to back of list
-	void removeFront();			 			// remove from front 
-	void removeEnd();						// remove from end
-	void print(); 							// prints the SLL
+	*/	
 	private:
-	SNode* head; 							// pointer to the head of list
+		SNode* head; 	 // pointer to the head of list
+	public:
+		SLinkedList();							// empty list constructor
+		~SLinkedList();							// destructor
+		bool empty() ; 					// is list empty?
+		string front() ;			// get front element
+		void addFront(string e); 		// add to front of list
+		void addBack(const string e); 			// add to back of list
+		void removeFront();			 			// remove from front 
+		void removeEnd();						// remove from end
+		void print(); 							// prints the SLL
+							
 };
 
 SLinkedList::SLinkedList()
