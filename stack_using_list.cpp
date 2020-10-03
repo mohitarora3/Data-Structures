@@ -37,19 +37,21 @@ class SLinkedList {
 	output value: none
 	side effects: Class SlinkedList defines Single Linked LIst class
 	approach: Class definition
-	*/						
-	public:
-	SLinkedList();							// empty list constructor
-	~SLinkedList();							// destructor
-	bool empty() ; 					// is list empty?
-	 string front(); 			// get front element
-	void addFront(string e); 		// add to front of list
-	void addBack(string e); 			// add to back of list
-	void removeFront();			 			// remove from front 
-	void removeEnd();						// remove from end
-	void print(); 							// prints the SLL
+	*/
 	private:
-	SNode* head; 							// pointer to the head of list
+		SNode* head; 	
+	public:
+	
+		SLinkedList();							// empty list constructor
+		~SLinkedList();							// destructor
+		bool empty() ; 					// is list empty?
+		 string front(); 			// get front element
+		void addFront(string e); 		// add to front of list
+		void addBack(string e); 			// add to back of list
+		void removeFront();			 			// remove from front 
+		void removeEnd();						// remove from end
+		void print(); 							// prints the SLL
+							// pointer to the head of list
 };
 
 class stack
