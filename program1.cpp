@@ -1,6 +1,7 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
+
 void check(int *main_local_addr)
 {
 	/*
@@ -19,6 +20,7 @@ void check(int *main_local_addr)
 	else
 		cout<<"\n\tSTACK GROWS DOWNWARD";
 }
+
 int main()
 {
 	/*
@@ -27,6 +29,7 @@ int main()
 	return value:none
 	approach:-calling function check
 	*/
+	
 	int main_local_par;
 	check(&main_local_par);
 	getch();
