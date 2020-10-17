@@ -203,16 +203,20 @@ int main()
 		cin>>ch;
 		switch(ch)
 		{
-			case 1:cout<<"\n\tENTER ELEMENT";
-				 cin>>ele;
-				 b.insert(ele);
-				 break;
-	 		case 2:b.inorder(b.ret_root());
-	 		 	  break;
-	  		case 3:b.preorder(b.ret_root());
-	 		 	  break;
-	 		case 4:b.postorder(b.ret_root());
-	 		 	  break;
+			case 1:
+			cout<<"\n\tENTER ELEMENT";
+			 cin>>ele;
+			 b.insert(ele);
+			 break;
+	 		case 2:
+			b.inorder(b.ret_root());
+	 		break;
+	  		case 3:
+			b.preorder(b.ret_root());
+	 	        break;
+	 		case 4:
+			b.postorder(b.ret_root());
+	 		break;
 	 	    case 5:cout<<"\n\tENTER ELEMENT";
 			 	 cin>>ele;
 				 if(b.search(b.ret_root(),ele))
