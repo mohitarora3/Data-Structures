@@ -2,7 +2,6 @@
 #include<conio.h>
 using namespace std;
 
-
 class SNode { 
 	/*   			
 	objective: Create a class for a Node for Single Linked list
@@ -79,8 +78,8 @@ string SLinkedList::front()
 
 void SLinkedList::addFront(string e)
 {
-	if(head==0)
- 			   head=new SNode(e);
+    if(head==0)
+ 	head=new SNode(e);
     else
     	head=new SNode(e,head);
     	
