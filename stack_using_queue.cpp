@@ -124,15 +124,18 @@ int main()
 	cin>>ch;
 	switch(ch)
 	{
-		case 1:cout<<"\n\tENTER ELEMENT";
-				cin>>ele;
-				s.push(ele);
-				break;
-		case 2:x=s.pop();
-				if(x!=-1)
-					cout<<"\n\tPOPPED ELEMENT IS:"<<x;
-				break;
-
+		case 1:
+		cout<<"\n\tENTER ELEMENT";
+		cin>>ele;
+		s.push(ele);
+		break;
+		case 2:
+		x=s.pop();
+		if(x!=-1)
+		{
+			cout<<"\n\tPOPPED ELEMENT IS:"<<x;
+			break;
+		}
 		default:cout<<"\n\tWRONG CHOICE!";
 				break;
 	}
