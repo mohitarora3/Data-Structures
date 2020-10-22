@@ -2,6 +2,7 @@
 #include<iostream.h>
 #include<conio.h>
 #include<process.h>
+
 class node
 {
 	private:
@@ -20,7 +21,6 @@ class node
 
 class doubly
 {
-
 
 	node *tail;
 
@@ -67,9 +67,6 @@ void doubly::addtotail(int ele)
 
 }
 
-
-
-
 void main()
 {
 	clrscr();
@@ -102,6 +99,7 @@ void main()
 
 		cout<<"\n\n\tDO U WANT TO CONTINUE?";
 		cin>>c;
+		
 	}while(c=='Y'||c=='y');
 	getch();
 }
