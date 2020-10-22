@@ -1,6 +1,7 @@
 #include<iostream>
 #include<conio.h>
 using namespace std;
+
 class node
 {
 	int info;
@@ -62,6 +63,7 @@ void binary::display()
 	node *a=new node[count];
 	node *temp=root;
 	a[i]=temp;
+		
 	while(i<count)
 	{
 		temp=a[i];
