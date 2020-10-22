@@ -13,6 +13,7 @@ void check(int *main_local_addr)
 				otherwise
 					stack grows downward 
 	*/
+	
 	int func_par;
 	if(&func_par>main_local_addr)
 		cout<<"\n\tSTACK GROWS UPWARD";
