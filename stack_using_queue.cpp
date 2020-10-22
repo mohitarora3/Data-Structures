@@ -107,14 +107,7 @@ int main()
 {
 	int x,ele,ch;
 	char c;
-//	queue q;
-	///*
-//	q.enque(1);
-//	q.enque(2);
-//	q.enque(3);
-//	cout<<q.deque();
-//	cout<<q.deque();
-//	cout<<q.deque();
+	
     stack s;
 	do{
 	cout<<"\n\tSTACK OPERATIONS USING QUEUE";
