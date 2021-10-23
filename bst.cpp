@@ -228,6 +228,7 @@ int main()
 		 	 default:cout<<"\n\tWRONG CHOICE";
 		 	 
 		}
+		
 		cout<<"\n\twant to continue (enter y or Y)";
 		cin>>c;
 	}while(c=='y'||c=='Y');
