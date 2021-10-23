@@ -494,6 +494,7 @@ void main()
 
 		cout<<"\n\n\tDO U WANT TO CONTINUE?";
 		cin>>ch;
+		
 	}while(ch=='Y'||ch=='y');
 	getch();
 }
