@@ -93,13 +93,13 @@ void linkedlist::reverse_consec()
 	*/	
 	
 	int t;
-	node *temp=head;
-	while(temp&&temp->next!=0)
+	node *temp = head;
+	while(temp && temp ->next != 0)
 	{
-		t=temp->info;
-		temp->info=temp->next->info;
-		temp->next->info=t;
-		temp=temp->next->next;
+		t = temp->info;
+		temp->info = temp->next->info;
+		temp->next->info = t;
+		temp = temp->next->next;
 	}
 	
 }
@@ -125,12 +125,13 @@ int main()
 		l.add_to_tail(ele);
 		cout<<"\n\twant to enter more(enter y or Y)";
 		cin>>ch;
+		
 	}while(ch=='y'||ch=='Y');
 	cout<<"\n\tLINKLIST IS:";
 	l.display();
 	l.reverse_consec();
 	cout<<"\n\tAFTER REVERSING CONSECUTIVE ELEMENTS:";
-	cout<<"\n\tLINKLIST IS:";
+	cout<<"\n\tLINKLIST IS AS FOLLOWS:";
 	l.display();
 	getch();
 }
