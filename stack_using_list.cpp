@@ -108,22 +108,22 @@ void SLinkedList::addFront(string e)
 void SLinkedList::addBack(string e)
 {
 	if(head==0)
-			   head=new SNode(e);
-    else
-    {
-    	SNode *prev,*temp=head;
+	  head=new SNode(e);
+        else
+        {
+      	SNode *prev,*temp=head;
     	while(temp)
     	{
-		    prev=temp;
-    		temp=temp->next;
+		prev = temp;
+    		temp = temp->next;
 		}
-		prev->next=new SNode(e);
+		prev->next = new SNode(e);
 	}
 }
 void SLinkedList::removeFront()
 {
 	if(!head)
-			 cout<<"\n\tUNDERFLOW";
+         cout<<"\n\tUNDERFLOW";
     else 
     {
     	SNode *temp=head;
@@ -178,6 +178,7 @@ int main()
 		cout<<"\n\n\t3.POP";
 		cout<<"\n\n\tENTER YOUR CHOICE";
 		cin>>choice;
+		
 		switch(choice)
 		{
 			case 1:cout<<"\n\n\tENTER THE ELEMENT : ";
@@ -197,6 +198,7 @@ int main()
 
 		cout<<"\n\n\tDO U WANT TO CONTINUE?";
 		cin>>ch;
-	}while(ch=='Y'||ch=='y');
+		
+	} while(ch=='Y'||ch=='y');
 	getch();
 }
