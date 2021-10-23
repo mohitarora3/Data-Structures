@@ -133,7 +133,7 @@ int main()
 					cout<<"\n\tPOPPED ELEMENT IS:"<<x;
 				break;
 
-		default:cout<<"\n\tWRONG CHOICE!";
+		default:cout<<"\n\tWRONG CHOICE!!. Better luck next time";
 				break;
 	}
 	cout<<"\n\twant to continue(enter y or Y)";
