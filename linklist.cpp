@@ -197,7 +197,7 @@ int main()
 			       cout<<el;
 			       break;
 			case 6:if(l.empty())
-						cout<<"\n\tLINKLIST IS EMPTY";
+				 cout<<"\n\tLINKLIST IS EMPTY";
 			        else
 			        	cout<<"\n\tLINKLIST IS NOT EMPTY";
 			       break;
@@ -208,7 +208,7 @@ int main()
 				break;
 		}
 
-		cout<<"\n\n\tDO U WANT TO CONTINUE?";
+		cout<<"\n\n\tDO U WANT TO CONTINUE OR WANT TO EXIT?";
 		cin>>ch;
 	}while(ch=='Y'||ch=='y');
 	getch();
