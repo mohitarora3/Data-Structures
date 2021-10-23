@@ -41,13 +41,11 @@ void linklist::addtohead(int ele)
 {
 	head=new node(ele,head,0);
 	if(tail!=0)
-	{
-	head->next->prev=head;
-	}
-	else
-	{
-	tail=head;
-	}
+	 head->next->prev=head;
+	
+	else  //tail will be head otherwise
+	 tail=head;
+	
 }
 int linklist::deletefromhead()
 {
