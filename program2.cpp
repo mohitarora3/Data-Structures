@@ -37,7 +37,7 @@ void check(stack <int>s)
 		s.pop();
 		b=s.top();
 		s.pop();
-		if(a!=b-1&&a!=b+1)
+		if(a != b - 1 && a != b + 1)
 		{
 			temp=0;
 			break;
@@ -64,7 +64,7 @@ int main()
 	int ele,n;
 	cout<<"\n\tENTER SIZE(how much elements do want to insert into stack)";
 	cin>>n;
-	cout<<"\n\tENTER ELEMENTS:";
+	cout<<"\n\tENTER ELEMENTS to be inserted:";
 	for(int i=0;i<n;i++)
 	{
 		cin>>ele;
