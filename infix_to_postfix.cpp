@@ -82,7 +82,7 @@ char stack::pop()
 	*/
 	if(top==-1)
 		{
-			cout<<"UNDERFLOW!!";
+			cout<<"UNDERFLOW!!!";
 			return -1;
 		}
 	else
@@ -110,7 +110,7 @@ char stack::peek()
 	*/
 	
 	if(top!=-1)
-			return arr[top];
+          return arr[top];
 	else
 	{
 		cout<<"\nUNDERFLOW!";
@@ -131,7 +131,7 @@ bool stack::isEmpty()
 	if(top==-1)
 		return 1;
 	else
-		return 0;
+	       return 0;
 }
 
 bool stack::isFull()
@@ -199,12 +199,13 @@ int main()
 	/*
 	objective:to implement stack operations
 	*/
+	
 	int ch,n,ele,x;
 	string str;
 	bool ans;
 	char c;
 	stack s;
-	cout<<"\nENTER INFIX EXPRESSION";
+	cout<<"\nENTER INFIX EXPRESSION:";
 	cin>>str;
 	conversion(str,str.length());	
 	getch();
