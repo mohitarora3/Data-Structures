@@ -51,13 +51,12 @@ void doubly::display()
 
 void doubly::addtotail(int ele)
 {
-	if(tail==0)
+	if(tail==0) //if no tail
 	{
 		tail=new node(ele);
 		tail->next=tail;
 		tail->prev=tail;
 	}
-
 
 	else
 	{
@@ -95,12 +94,11 @@ void main()
 		       l1.display();
 		       break;
 
-
-			default:exit(0);
+                default:exit(0);
 
 		}
 
-		cout<<"\n\n\tDO U WANT TO CONTINUE?";
+		cout<<"\n\n\tDO U WANT TO CONTINUE OR WANT TO EXIT?";
 		cin>>c;
 	}while(c=='Y'||c=='y');
 	getch();
