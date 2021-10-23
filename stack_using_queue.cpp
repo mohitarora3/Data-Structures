@@ -107,19 +107,13 @@ int main()
 {
 	int x,ele,ch;
 	char c;
-//	queue q;
-	///*
-//	q.enque(1);
-//	q.enque(2);
-//	q.enque(3);
-//	cout<<q.deque();
-//	cout<<q.deque();
-//	cout<<q.deque();
+
+	
     stack s;
 	do{
 	cout<<"\n\tSTACK OPERATIONS USING QUEUE";
-	cout<<"\n\t1.PUSH";
-	cout<<"\n\t2.POP";
+	cout<<"\n\t1.PUSH INTO StACK";
+	cout<<"\n\t2.POP FROM STACK";
 	cout<<"\n\tENTER YOUR CHOICE";
 	cin>>ch;
 	switch(ch)
@@ -133,11 +127,12 @@ int main()
 					cout<<"\n\tPOPPED ELEMENT IS:"<<x;
 				break;
 
-		default:cout<<"\n\tWRONG CHOICE!";
+		default:cout<<"\n\tWRONG CHOICE!!";
 				break;
 	}
 	cout<<"\n\twant to continue(enter y or Y)";
 	cin>>c;
+		
 }while(c=='y'||c=='Y');
 
 getch();
